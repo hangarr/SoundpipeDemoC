@@ -1,4 +1,9 @@
 .DS_Store
+src/.DS_Store
+external/.DS_Store
+inc/.DS_Store
+modules/.DS_Store
+test/.DS_Store
 
 # Prerequisites
 *.d
