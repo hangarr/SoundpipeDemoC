@@ -32,8 +32,8 @@ Running
 These are both run the same way:
 ```
 > cd ./build
-> singlepipe [-d] -o ./path/to/dest.wav ./path/to/src.wav
-> multipipe [-d] -o ./path/to/dest.wav ./path/to/src.wav
+> ./singlepipe [-d] -o ./path/to/dest.wav ./path/to/src.wav
+> ./multipipe [-d] -o ./path/to/dest.wav ./path/to/src.wav
 ```
 The `straightpipe` executable should just copy `src.wav` to `dest.wav`.  The `multipipe` executable should create multiple copies `dest_0.wav ... `dest_3.wav` of `src.wav`.
 
