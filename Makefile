@@ -48,7 +48,8 @@ endif
 
 # C compiler flags
 
-CFLAGS += -DSP_VERSION=$(VERSION) -O3 -DSPFLOAT=${SPFLOAT} -std=c99
+#CFLAGS += -DSP_VERSION=$(VERSION) -O3 -DSPFLOAT=${SPFLOAT} -std=c99
+CFLAGS += -DSP_VERSION=$(VERSION) -O3 -DSPFLOAT=${SPFLOAT}
 CFLAGS += -Iinclude -I/usr/local/include
 
 # switches and static libraries
@@ -82,7 +83,7 @@ $(BLDEXECS_DIR)/%.o: $(SRCEXECS_DIR)/%.c $(SP_PREFIX)/*.h \
 # link the executables
 
 $(BLDEXECS_DIR)/%: $(BLDEXECS_DIR)/%.o | $(SRCEXECS_DIR)
-	$(CC) $(CLFLAGS) -o $@ $< $(CLLIBS)
+	$(CC) $(CLFLAGS) -o $@ $< $(CLLIBS) -lm
 
 # Make automatically deletes “intermediate” files.
 # This target will keep them.
